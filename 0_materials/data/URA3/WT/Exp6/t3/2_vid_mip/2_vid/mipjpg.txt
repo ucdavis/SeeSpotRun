@@ -1,0 +1,5 @@
+cd /Volumes/SilverSeaGate/Archive/Work/3\ Appointments/UC\ Davis/Shared/Research/Yeast/teto-tetr/Timecourse\ data/neworg/URA3/WT/Exp6/t3/2_vid_mip/2_vid/
+
+mkdir jmip
+
+convert -quality 60 Stackbc.tif jmip/Stacky.jpg

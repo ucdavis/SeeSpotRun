@@ -1,0 +1,11 @@
+type 1: 
+1151x1021 px
+ori x=179
+ori y=911
+size=833
+
+type 2: 
+3072x2448 px
+ori x=592
+ori y=2178
+size=1996

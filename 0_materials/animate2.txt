@@ -1,0 +1,3 @@
+cd /Volumes/SilverSeaGate/Archive/Work/3\ Appointments/UC\ Davis/Shared/Research/Yeast/teto-tetr/Timecourse\ data/neworg/URA3/WT/Exp6/t4/8_anaprog/selections/multi2
+
+convert -density 300 -delay 0 -loop 0 -alpha set -dispose previous *.pdf ../animated2.gif
