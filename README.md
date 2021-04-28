@@ -1,6 +1,6 @@
 # :dog: SeeSpotRun
 
-Newman, T., Beltran, B., McGehee, J., Elnatan, D., Cahoon, C., Chu, D., Spakowitz, A., and Burgess, S. Homologous chromosomes undergo sequential quasi-stable interactions during meiotic prophase. 2019. Unpublished.
+Newman, T., Beltran, B., McGehee, J., Elnatan, D., Cahoon, C., Chu, D., Spakowitz, A., and Burgess, S. Homologous chromosomes undergo sequential quasi-stable interactions during meiotic prophase. 2019. Biorxiv.
 
 ![](0_materials/assets/FigSV02-2.gif)
 
