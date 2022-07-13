@@ -1,6 +1,5 @@
 # :dog: SeeSpotRun
-
-Newman, T., Beltran, B., McGehee, J., Elnatan, D., Cahoon, C., Chu, D., Spakowitz, A., and Burgess, S. Homologous chromosomes undergo sequential quasi-stable interactions during meiotic prophase. 2019. Biorxiv.
+Newman T, Beltran B, McGehee J, Elnatan E, Cahoon CK, Paddy, MR, Chu DB, Spakowitz A*, and Burgess SM* (2022) Diffusion and distal linkages govern interchromosomal dynamics during meiotic prophase. PNAS, DOI: 10.1073/pnas.2115883119 
 
 ![](0_materials/assets/FigSV02-2.gif)
 
