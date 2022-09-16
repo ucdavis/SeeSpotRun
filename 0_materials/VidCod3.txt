@@ -3,8 +3,9 @@
 ### Choose directory
 cd /Volumes/SilverSeaGate/Archive/Work/3\ Appointments/UC\ Davis/Shared/Research/Yeast/teto-tetr/Timecourse\ data/neworg/LYS2/WT/Exp2/t1/1_raw_tiff
 
-### Create output directory
+### Create output directories
 mkdir -p ../2_vid_mip/1_multi_MIP
+mkdir -p ../2_vid_mip/2_vid
 
 ### Assemble z-sections for each timepoint
 seq -w 0 49 | parallel -j12 'convert *T{}.tiff ../2_vid_mip/1_multi_MIP/multi_T{}.tiff'
