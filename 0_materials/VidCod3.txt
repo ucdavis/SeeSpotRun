@@ -1,124 +1,20 @@
+#!/usr/bin/bash
+
 ### Choose directory
 cd /Volumes/SilverSeaGate/Archive/Work/3\ Appointments/UC\ Davis/Shared/Research/Yeast/teto-tetr/Timecourse\ data/neworg/LYS2/WT/Exp2/t1/1_raw_tiff
 
+### Create output directories
+mkdir -p ../2_vid_mip/1_multi_MIP
+mkdir -p ../2_vid_mip/2_vid
+
 ### Assemble z-sections for each timepoint
-###
-convert *T00.tiff ../2_vid_mip/1_multi_MIP/multi_T00.tiff
-convert *T01.tiff ../2_vid_mip/1_multi_MIP/multi_T01.tiff
-convert *T02.tiff ../2_vid_mip/1_multi_MIP/multi_T02.tiff
-convert *T03.tiff ../2_vid_mip/1_multi_MIP/multi_T03.tiff
-convert *T04.tiff ../2_vid_mip/1_multi_MIP/multi_T04.tiff
-convert *T05.tiff ../2_vid_mip/1_multi_MIP/multi_T05.tiff
-convert *T06.tiff ../2_vid_mip/1_multi_MIP/multi_T06.tiff
-convert *T07.tiff ../2_vid_mip/1_multi_MIP/multi_T07.tiff
-convert *T08.tiff ../2_vid_mip/1_multi_MIP/multi_T08.tiff
-convert *T09.tiff ../2_vid_mip/1_multi_MIP/multi_T09.tiff
-###
-convert *T10.tiff ../2_vid_mip/1_multi_MIP/multi_T10.tiff
-convert *T11.tiff ../2_vid_mip/1_multi_MIP/multi_T11.tiff
-convert *T12.tiff ../2_vid_mip/1_multi_MIP/multi_T12.tiff
-convert *T13.tiff ../2_vid_mip/1_multi_MIP/multi_T13.tiff
-convert *T14.tiff ../2_vid_mip/1_multi_MIP/multi_T14.tiff
-convert *T15.tiff ../2_vid_mip/1_multi_MIP/multi_T15.tiff
-convert *T16.tiff ../2_vid_mip/1_multi_MIP/multi_T16.tiff
-convert *T17.tiff ../2_vid_mip/1_multi_MIP/multi_T17.tiff
-convert *T18.tiff ../2_vid_mip/1_multi_MIP/multi_T18.tiff
-convert *T19.tiff ../2_vid_mip/1_multi_MIP/multi_T19.tiff
-###
-convert *T20.tiff ../2_vid_mip/1_multi_MIP/multi_T20.tiff
-convert *T21.tiff ../2_vid_mip/1_multi_MIP/multi_T21.tiff
-convert *T22.tiff ../2_vid_mip/1_multi_MIP/multi_T22.tiff
-convert *T23.tiff ../2_vid_mip/1_multi_MIP/multi_T23.tiff
-convert *T24.tiff ../2_vid_mip/1_multi_MIP/multi_T24.tiff
-convert *T25.tiff ../2_vid_mip/1_multi_MIP/multi_T25.tiff
-convert *T26.tiff ../2_vid_mip/1_multi_MIP/multi_T26.tiff
-convert *T27.tiff ../2_vid_mip/1_multi_MIP/multi_T27.tiff
-convert *T28.tiff ../2_vid_mip/1_multi_MIP/multi_T28.tiff
-convert *T29.tiff ../2_vid_mip/1_multi_MIP/multi_T29.tiff
-###
-convert *T30.tiff ../2_vid_mip/1_multi_MIP/multi_T30.tiff
-convert *T31.tiff ../2_vid_mip/1_multi_MIP/multi_T31.tiff
-convert *T32.tiff ../2_vid_mip/1_multi_MIP/multi_T32.tiff
-convert *T33.tiff ../2_vid_mip/1_multi_MIP/multi_T33.tiff
-convert *T34.tiff ../2_vid_mip/1_multi_MIP/multi_T34.tiff
-convert *T35.tiff ../2_vid_mip/1_multi_MIP/multi_T35.tiff
-convert *T36.tiff ../2_vid_mip/1_multi_MIP/multi_T36.tiff
-convert *T37.tiff ../2_vid_mip/1_multi_MIP/multi_T37.tiff
-convert *T38.tiff ../2_vid_mip/1_multi_MIP/multi_T38.tiff
-convert *T39.tiff ../2_vid_mip/1_multi_MIP/multi_T39.tiff
-###
-convert *T40.tiff ../2_vid_mip/1_multi_MIP/multi_T40.tiff
-convert *T41.tiff ../2_vid_mip/1_multi_MIP/multi_T41.tiff
-convert *T42.tiff ../2_vid_mip/1_multi_MIP/multi_T42.tiff
-convert *T43.tiff ../2_vid_mip/1_multi_MIP/multi_T43.tiff
-convert *T44.tiff ../2_vid_mip/1_multi_MIP/multi_T44.tiff
-convert *T45.tiff ../2_vid_mip/1_multi_MIP/multi_T45.tiff
-convert *T46.tiff ../2_vid_mip/1_multi_MIP/multi_T46.tiff
-convert *T47.tiff ../2_vid_mip/1_multi_MIP/multi_T47.tiff
-convert *T48.tiff ../2_vid_mip/1_multi_MIP/multi_T48.tiff
-convert *T49.tiff ../2_vid_mip/1_multi_MIP/multi_T49.tiff
-###
+seq -w 0 49 | parallel -j12 'convert *T{}.tiff ../2_vid_mip/1_multi_MIP/multi_T{}.tiff'
 
 ### Choose directory
-cd /Volumes/SilverSeaGate/Archive/Work/3\ Appointments/UC\ Davis/Shared/Research/Yeast/teto-tetr/Timecourse\ data/neworg/LYS2/WT/Exp2/t1/2_vid_mip/1_multi_MIP/
+cd ../2_vid_mip/1_multi_MIP/
 
 ### Make maximum intensity projections for each timepoint
-###
-convert multi_T00.tiff -evaluate-sequence max multi_T00_MIP.tiff
-convert multi_T01.tiff -evaluate-sequence max multi_T01_MIP.tiff
-convert multi_T02.tiff -evaluate-sequence max multi_T02_MIP.tiff
-convert multi_T03.tiff -evaluate-sequence max multi_T03_MIP.tiff
-convert multi_T04.tiff -evaluate-sequence max multi_T04_MIP.tiff
-convert multi_T05.tiff -evaluate-sequence max multi_T05_MIP.tiff
-convert multi_T06.tiff -evaluate-sequence max multi_T06_MIP.tiff
-convert multi_T07.tiff -evaluate-sequence max multi_T07_MIP.tiff
-convert multi_T08.tiff -evaluate-sequence max multi_T08_MIP.tiff
-convert multi_T09.tiff -evaluate-sequence max multi_T09_MIP.tiff
-###
-convert multi_T10.tiff -evaluate-sequence max multi_T10_MIP.tiff
-convert multi_T11.tiff -evaluate-sequence max multi_T11_MIP.tiff
-convert multi_T12.tiff -evaluate-sequence max multi_T12_MIP.tiff
-convert multi_T13.tiff -evaluate-sequence max multi_T13_MIP.tiff
-convert multi_T14.tiff -evaluate-sequence max multi_T14_MIP.tiff
-convert multi_T15.tiff -evaluate-sequence max multi_T15_MIP.tiff
-convert multi_T16.tiff -evaluate-sequence max multi_T16_MIP.tiff
-convert multi_T17.tiff -evaluate-sequence max multi_T17_MIP.tiff
-convert multi_T18.tiff -evaluate-sequence max multi_T18_MIP.tiff
-convert multi_T19.tiff -evaluate-sequence max multi_T19_MIP.tiff
-###
-convert multi_T20.tiff -evaluate-sequence max multi_T20_MIP.tiff
-convert multi_T21.tiff -evaluate-sequence max multi_T21_MIP.tiff
-convert multi_T22.tiff -evaluate-sequence max multi_T22_MIP.tiff
-convert multi_T23.tiff -evaluate-sequence max multi_T23_MIP.tiff
-convert multi_T24.tiff -evaluate-sequence max multi_T24_MIP.tiff
-convert multi_T25.tiff -evaluate-sequence max multi_T25_MIP.tiff
-convert multi_T26.tiff -evaluate-sequence max multi_T26_MIP.tiff
-convert multi_T27.tiff -evaluate-sequence max multi_T27_MIP.tiff
-convert multi_T28.tiff -evaluate-sequence max multi_T28_MIP.tiff
-convert multi_T29.tiff -evaluate-sequence max multi_T29_MIP.tiff
-###
-convert multi_T30.tiff -evaluate-sequence max multi_T30_MIP.tiff
-convert multi_T31.tiff -evaluate-sequence max multi_T31_MIP.tiff
-convert multi_T32.tiff -evaluate-sequence max multi_T32_MIP.tiff
-convert multi_T33.tiff -evaluate-sequence max multi_T33_MIP.tiff
-convert multi_T34.tiff -evaluate-sequence max multi_T34_MIP.tiff
-convert multi_T35.tiff -evaluate-sequence max multi_T35_MIP.tiff
-convert multi_T36.tiff -evaluate-sequence max multi_T36_MIP.tiff
-convert multi_T37.tiff -evaluate-sequence max multi_T37_MIP.tiff
-convert multi_T38.tiff -evaluate-sequence max multi_T38_MIP.tiff
-convert multi_T39.tiff -evaluate-sequence max multi_T39_MIP.tiff
-###
-convert multi_T40.tiff -evaluate-sequence max multi_T40_MIP.tiff
-convert multi_T41.tiff -evaluate-sequence max multi_T41_MIP.tiff
-convert multi_T42.tiff -evaluate-sequence max multi_T42_MIP.tiff
-convert multi_T43.tiff -evaluate-sequence max multi_T43_MIP.tiff
-convert multi_T44.tiff -evaluate-sequence max multi_T44_MIP.tiff
-convert multi_T45.tiff -evaluate-sequence max multi_T45_MIP.tiff
-convert multi_T46.tiff -evaluate-sequence max multi_T46_MIP.tiff
-convert multi_T47.tiff -evaluate-sequence max multi_T47_MIP.tiff
-convert multi_T48.tiff -evaluate-sequence max multi_T48_MIP.tiff
-convert multi_T49.tiff -evaluate-sequence max multi_T49_MIP.tiff
-###
+seq -w 0 49 | parallel -j12 'convert multi_T{}.tiff -evaluate-sequence max multi_T{}_MIP.tiff'
 
 ### Combine MIPs into an animated gif
 convert -layers OptimizePlus -delay 0 -loop 0 -alpha set -dispose previous *MIP.tiff ../2_vid/animated.gif
