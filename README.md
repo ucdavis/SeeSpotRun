@@ -38,6 +38,13 @@ Newman T, Beltran B, McGehee J, Elnatan E, Cahoon CK, Paddy, MR, Chu DB, Spakowi
 
 This part of the pipeline currently requires the commercial MATLAB software. An alternative, experimental, open-source GNU Octave spot calling pipeline is also available upon request.
 
+### Installing Matlab add-ons
+
+If you encounter dificulties drawing ellipses, check if you have "Image Processing Toolbox" and "Medical Imaging Toolbox" installed. If not, then please install them. Select the "Apps" tab and click on "Get Add-Ons" to get to the "Add-on Explorer" that you can use to install them.
+
+![](0_materials/assets/get_apps.png)  
+**Fig.** Accessing the "Add-on Explorer" interface
+
 ### Image segmentation and spot detection
 
 ![](0_materials/assets/dist.png)
