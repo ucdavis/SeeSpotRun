@@ -40,7 +40,7 @@ This part of the pipeline currently requires the commercial MATLAB software. An 
 
 ### Installing Matlab add-ons
 
-If you encounter dificulties drawing ellipses, check if you have the "Image Processing Toolbox" and "Medical Imaging Toolbox" add-ons installed. If not, then please install them. Select the "Apps" tab and click on "Get Add-Ons" to get to the "Add-on Explorer" that you can use to verify their installation and/or install them.
+If you encounter dificulties drawing ellipses, check if you have the "Image Processing Toolbox" and "Medical Imaging Toolbox" add-ons installed. Select the "Apps" tab and click on "Get Add-Ons" to get to the "Add-on Explorer" that you can use to verify their installation and/or install them.
 
 ![](0_materials/assets/get_apps.png)  
 **Fig.** Accessing the "Add-on Explorer" interface
